@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Course } from 'models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Exercise_1';
+  courses: Course[] = [{
+    name: 'Advanced Frontend Development',
+    code: 'SWAFE-01',
+    ects: 5,
+  }, {
+    name: 'IoT Software Perspective',
+    code: 'SWIOT-01',
+    ects: 5,
+  }, {
+    name: 'Machine Learning for Health Care',
+    code: 'SWMLHC-01',
+    ects: 5,
+  }]
 }
