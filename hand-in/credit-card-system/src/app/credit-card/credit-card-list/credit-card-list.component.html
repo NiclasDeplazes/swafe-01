@@ -1,5 +1,5 @@
 <ul>
     <li *ngFor="let creditCard of creditCards$ | async">
-      <a routerLink={{creditCard.card_number}}>{{ creditCard.card_number }}: {{creditCard.cardholder_name}} - {{creditCard.issuer}}</a>
+      <a [routerLink]="['/credit-card', creditCard.card_number]">{{ creditCard.card_number }}: {{creditCard.cardholder_name}} - {{creditCard.issuer}}</a>
     </li>
 </ul>

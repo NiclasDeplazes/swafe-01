@@ -6,7 +6,8 @@ import { catchError, Observable, retry, retryWhen, throwError } from 'rxjs';
     providedIn: 'root'
 })
 export class CreditCardService {
-    host = 'http://localhost:3000/credit_cards/cards/'
+    host = 'http://localhost:3000/cards/'
+    creditCard!: CreditCard;
 
     constructor(private httpClient: HttpClient) { }
 
@@ -18,6 +19,18 @@ export class CreditCardService {
             }),
             retry(5)
         )
+    }
+
+    getCreditCard(card_number: number): Observable<CreditCard> {
+        
+        return this.httpClient.get<CreditCard>(this.host+card_number).pipe(
+            catchError((e: HttpErrorResponse) => {
+                console.error(e.message)
+                return throwError(() => e);
+            }),
+            retry(5)
+        )
+        
     }
 }
 
