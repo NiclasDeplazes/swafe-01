@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { CreditCardAddComponent } from './credit-card-add/credit-card-add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,7 +17,6 @@ import { CreditCardModule } from './credit-card/credit-card.module';
     AppComponent,
     HomeComponent,
     NavigationBarComponent,
-    TransactionListComponent,
     CreditCardAddComponent
   ],
   imports: [

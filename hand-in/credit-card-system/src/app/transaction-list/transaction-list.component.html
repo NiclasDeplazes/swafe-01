@@ -1,1 +1,5 @@
-<p>transaction-list works!</p>
+<ul>
+    <li *ngFor="let transaction of transactions$ | async">
+      <a>{{ transaction.uid }}: {{transaction.date}} - {{transaction.amount}}{{transaction.currency}}{{transaction.comment}}{{transaction.credit_card}}</a>
+    </li>
+</ul>

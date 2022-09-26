@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Transaction, TransactionService } from 'src/app/services/transaction.service';
 
 @Component({
   selector: 'app-transaction-overview',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionOverviewComponent implements OnInit {
 
-  constructor() { }
+  transactions$!: Observable<Transaction[]>
+  constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
+    this.transactions$ = this.transactionService.getTransactions()
   }
 
 }
