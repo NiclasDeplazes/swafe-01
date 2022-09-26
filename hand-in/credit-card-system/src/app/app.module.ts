@@ -10,6 +10,8 @@ import { CreditCardAddComponent } from './credit-card-add/credit-card-add.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { CreditCardModule } from './credit-card/credit-card.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    CreditCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
