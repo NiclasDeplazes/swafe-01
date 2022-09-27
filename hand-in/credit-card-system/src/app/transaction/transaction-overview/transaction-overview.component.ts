@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Transaction, TransactionService } from 'src/app/services/transaction.service';
+import { TransactionService } from 'src/app/services/transaction.service';
+import { Transaction } from "src/app/types/transaction.type";
 
 @Component({
   selector: 'app-transaction-overview',
@@ -9,6 +10,7 @@ import { Transaction, TransactionService } from 'src/app/services/transaction.se
 })
 export class TransactionOverviewComponent implements OnInit {
 
+  searchText = '';
   transactions$!: Observable<Transaction[]>
   constructor(private transactionService: TransactionService) { }
 

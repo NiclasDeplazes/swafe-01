@@ -1,5 +1,11 @@
-<ul>
-    <li *ngFor="let transaction of transactions$ | async">
-      <a>{{ transaction.uid }}: {{transaction.date}} - {{transaction.amount}} {{transaction.currency}} {{transaction.comment}} {{transaction.credit_card.issuer}}</a>
-    </li>
-</ul>
+
+<mat-list>
+  <mat-list-item *ngFor="let transaction of transactions$ | async">
+    <!-- <div *ngIf="transaction.credit_card.card_number === 6034932528973614"> -->
+      <div mat-line>Card Number: {{transaction.credit_card.card_number}}</div>
+      <div mat-line>Amount: {{transaction.amount | number:'1.0-2'}} {{transaction.currency}}</div>
+      <div mat-line>Date: {{transaction.date | date}}</div>
+      <div mat-line>Comment: {{transaction.comment}}</div>
+    <!-- </div> -->
+  </mat-list-item>
+</mat-list>

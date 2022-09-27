@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, retryWhen, throwError } from 'rxjs';
-import { CreditCard } from './credit-card.service';
+import { Transaction } from '../types/transaction.type';
 
 @Injectable({
     providedIn: 'root'
@@ -23,11 +23,3 @@ export class TransactionService {
     }
 }
 
-export interface Transaction {
-    credit_card: CreditCard;
-    amount: number;
-    comment: string;
-    date: number;
-    currency: string;
-    uid?: string;
-}

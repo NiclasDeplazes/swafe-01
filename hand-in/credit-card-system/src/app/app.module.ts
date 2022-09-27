@@ -9,15 +9,21 @@ import { CreditCardAddComponent } from './credit-card-add/credit-card-add.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { CreditCardModule } from './credit-card/credit-card.module';
+import { FormsModule } from '@angular/forms';
+import { TransactionFilterPipe } from './pipes/transaction-filter.pipe';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavigationBarComponent,
-    CreditCardAddComponent
+    CreditCardAddComponent,
+    TransactionFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -25,8 +31,12 @@ import { CreditCardModule } from './credit-card/credit-card.module';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
     HttpClientModule,
-    CreditCardModule
+    CreditCardModule,
+    TransactionListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

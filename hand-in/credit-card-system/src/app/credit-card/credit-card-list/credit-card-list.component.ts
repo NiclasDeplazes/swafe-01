@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CreditCard, CreditCardService } from 'src/app/services/credit-card.service';
+import { CreditCardService } from 'src/app/services/credit-card.service';
+import { CreditCard } from 'src/app/types/credit-card.type';
 
 @Component({
   selector: 'app-credit-card-list',

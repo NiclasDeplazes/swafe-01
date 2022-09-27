@@ -4,6 +4,7 @@ import { TransactionOverviewComponent } from './transaction-overview/transaction
 import { TransactionAddComponent } from './transaction-add/transaction-add.component';
 import { TransactionListComponent } from '../transaction-list/transaction-list.component';
 import { AppModule } from '../app.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { AppModule } from '../app.module';
   imports: [
     CommonModule,
     AppModule,
-    TransactionListComponent
+    TransactionListComponent,
+    FormsModule
   ]
 })
 export class TransactionModule { }

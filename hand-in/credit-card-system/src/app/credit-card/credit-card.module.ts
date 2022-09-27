@@ -4,7 +4,7 @@ import { CreditCardListComponent } from './credit-card-list/credit-card-list.com
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CreditCardDetailComponent } from './credit-card-detail/credit-card-detail.component';
-
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { CreditCardDetailComponent } from './credit-card-detail/credit-card-deta
   imports: [
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   exports: [
     CreditCardListComponent,
