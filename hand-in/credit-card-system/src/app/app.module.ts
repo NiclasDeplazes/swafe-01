@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreditCardModule } from './credit-card/credit-card.module';
 import { FormsModule } from '@angular/forms';
 import { TransactionFilterPipe } from './pipes/transaction-filter.pipe';
-import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import { TransactionModule } from './transaction/transaction.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
     FormsModule,
     HttpClientModule,
     CreditCardModule,
-    TransactionListComponent
+    TransactionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
