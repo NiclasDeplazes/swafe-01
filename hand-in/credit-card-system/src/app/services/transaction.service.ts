@@ -31,5 +31,14 @@ export class TransactionService {
             retry(5)
         )
     }
+
+    removeTransaction(uid: string): Observable<any> {
+        return this.httpClient.delete(`${this.host}/${uid}`).pipe(
+            catchError((e: HttpErrorResponse) => {
+                console.error(e.message);
+                return throwError(() => e);
+            })
+        )
+    }
 }
 

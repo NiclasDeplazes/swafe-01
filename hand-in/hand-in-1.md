@@ -45,14 +45,14 @@ The solution will provide the accounting department with an overview of use for 
 - `F5.1.3` ~~Screen shall present the option to filter transactions~~
 - `F5.1.4` ~~Screen shall provide filtering based on `card_number`~~
 
-`F6` Transactions list
+`F6` ~~Transactions list~~
 - `F6.1.1` ~~Each transaction shall display properties `credit_card`, `amount`, `currency`, `comment`, `date`~~
 - `F6.1.2` ~~Field `credit_card` shall be selected from a list of credit cards~~
 - `F6.1.3` ~~Field `amount` must be a `number`~~
 - `F6.1.4` ~~Field `amount` is required~~
 - `F6.1.5` ~~Field `currency` is required~~
 - `F6.1.6` ~~Field `date` is required~~
-- `F6.1.7` Each transaction shall present the option to remove itself
+- `F6.1.7` ~~Each transaction shall present the option to remove itself~~
 
 ## Design requirements 
 Futhermore, the solution must include the following:

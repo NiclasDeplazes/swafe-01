@@ -5,7 +5,7 @@
             <mat-label>Card Number</mat-label>
             <input matInput type="string" name="cardNumber" [(ngModel)]="searchText" mask="0000 0000 0000 0000">
         </mat-form-field>
-        <app-transaction-list [transactions]="transactions | appTransactionFilter: searchText"></app-transaction-list>
+        <app-transaction-list [transactions]="transactions | appTransactionFilter: searchText" (deleteTransactionEvent)="deleteTransaction($event)"></app-transaction-list>
     </ng-container>
     <ng-template #loadingTemplate>
         <app-transaction-list [transactions]="[]"></app-transaction-list>
