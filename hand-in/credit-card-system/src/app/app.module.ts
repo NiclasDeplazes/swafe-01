@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { TransactionModule } from './transaction/transaction.module';
 import { NgxMaskModule } from 'ngx-mask';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
     HttpClientModule,
     CreditCardModule,
     TransactionModule,
+    MatCardModule,
     CreditCardAddComponent,
     NgxMaskModule.forRoot(),
   ],

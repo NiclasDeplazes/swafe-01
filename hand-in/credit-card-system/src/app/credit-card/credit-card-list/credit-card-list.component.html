@@ -1,7 +1,7 @@
-<mat-list>
-  <mat-list-item *ngFor="let creditCard of creditCards$ | async" [routerLink]="['/credit-card', creditCard.card_number]">
-    <div mat-line>Card Number: {{creditCard.card_number | mask: '0000 0000 0000 0000' }}</div>
-    <div mat-line>Card Holder: {{creditCard.cardholder_name}}</div>
-    <div mat-line>Card Issuer: {{creditCard.issuer}}</div>
+<mat-list class="flex flex-col gap-4">
+  <mat-list-item class="shadow-sm border border-slate-200 rounded-xl hover:shadow-md hover:bg-slate-50" *ngFor="let creditCard of creditCards$ | async" [routerLink]="['/credit-card', creditCard.card_number]">
+    <h3 class="font-medium" mat-line>{{ creditCard.card_number | mask: '0000 0000 0000 0000' }}</h3>
+    <div class="text-slate-500" mat-line>{{ creditCard.cardholder_name | uppercase }}</div>
+    <div class="text-slate-400" mat-line>{{ creditCard.issuer }}</div>
   </mat-list-item>
 </mat-list>

@@ -26,7 +26,7 @@ The solution will provide the accounting department with an overview of use for 
 - `F3.2` ~~Screen shall contain the option to remove the credit card~~
 - `F3.3` ~~Screen shall contain a list of transactions for the credit card~~
 
-`F4` Add credit card screen
+`F4` ~~Add credit card screen~~
 - `F4.1` ~~Form that contains fields for `card_number`, `cardholder_name`, `csc_code`, `expiration_date_month`, `expiration_date_year`, `issuer`~~
 - `F4.1.1` ~~Field `card_number` only accepts numbers (integers)~~
 - `F4.1.2` ~~Field `card_number` length must be `7-16` digits~~
