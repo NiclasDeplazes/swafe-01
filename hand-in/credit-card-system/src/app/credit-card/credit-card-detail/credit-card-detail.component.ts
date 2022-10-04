@@ -27,6 +27,7 @@ export class CreditCardDetailComponent implements OnInit {
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this.creditCard$ = this.creditCardService.getCreditCard(this.id);
+    // This is probably not the right way to do this - the request for the credit card info gets fires twice.
     this.transactions$ = this.creditCard$.pipe(switchMap(card => {
       return this.transactionService.getTransactions().pipe(
         map(transactions => transactions.filter(t => t.credit_card.card_number === card.card_number))
