@@ -14,7 +14,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { CreditCardModule } from './credit-card/credit-card.module';
 import { FormsModule } from '@angular/forms';
-import { TransactionFilterPipe } from './pipes/transaction-filter.pipe';
 import { TransactionModule } from './transaction/transaction.module';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { TransactionModule } from './transaction/transaction.module';
     HomeComponent,
     NavigationBarComponent,
     CreditCardAddComponent,
-    TransactionFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+.transaction {
+    &-card {
+        margin-top: 3rem;
+    }
+
+    &-add-button {
+        position: fixed;
+        inset: auto 1rem 1rem auto;
+    }
+}
+
+:host {
+    max-width: 640px;
+    width: 100%;
+    flex-grow: 1;
+}

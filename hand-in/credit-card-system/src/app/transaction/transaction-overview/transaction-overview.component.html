@@ -1,2 +1,19 @@
-<h1>Transactions Overview</h1>
-<app-transaction-list></app-transaction-list>
+<mat-card class="transaction-card">
+    <mat-card-title>Transactions Overview</mat-card-title>
+    <ng-container *ngIf="(transactions$ | async) as transactions; else loadingTemplate">
+        <mat-form-field appearance="outline">
+            <mat-label>Card Number</mat-label>
+            <input matInput type="string" name="cardNumber" [(ngModel)]="searchText">
+        </mat-form-field>
+        <app-transaction-list [transactions]="transactions | appTransactionFilter: searchText"></app-transaction-list>
+    </ng-container>
+    <ng-template #loadingTemplate>
+        <app-transaction-list [transactions]="[]"></app-transaction-list>
+        <mat-card-footer>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+    </ng-template>
+</mat-card>
+<a routerLink="add" mat-fab color="accent" class="transaction-add-button">
+    <mat-icon>add</mat-icon>
+</a>

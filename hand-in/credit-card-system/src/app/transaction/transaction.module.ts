@@ -4,18 +4,32 @@ import { TransactionOverviewComponent } from './transaction-overview/transaction
 import { TransactionAddComponent } from './transaction-add/transaction-add.component';
 import { TransactionListComponent } from '../transaction-list/transaction-list.component';
 import { FormsModule } from '@angular/forms';
-
-
+import { TransactionRoutingModule } from './transaction-routing.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button'
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { TransactionFilterPipe } from '../pipes/transaction-filter.pipe';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
     TransactionOverviewComponent,
-    TransactionAddComponent
+    TransactionAddComponent,
+    TransactionFilterPipe,
   ],
   imports: [
     CommonModule,
     TransactionListComponent,
-    FormsModule
+    FormsModule,
+    TransactionRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatProgressBarModule,
   ]
 })
 export class TransactionModule { }

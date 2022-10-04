@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'credit-card/:id', component: CreditCardDetailComponent},
   { path: 'add', component: CreditCardAddComponent},
-  { path: 'transactions', component: TransactionOverviewComponent}
+  { path: 'transactions', loadChildren: () => import('./transaction/transaction.module').then(m => m.TransactionModule)}
 ];
 
 @NgModule({
