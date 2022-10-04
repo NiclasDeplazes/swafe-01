@@ -58,10 +58,10 @@
 
     <h2 class="mt-12">Card transactions</h2>
     <ng-container *ngIf="(transactions$ | async) as transactions; else loadingTemplate">
-        <app-transaction-list [transactions]="transactions" [displayedColumns]="['amount', 'date']"></app-transaction-list>
+        <app-transaction-list [transactions]="transactions" [displayedColumns]="['amount', 'date', 'comment']"></app-transaction-list>
     </ng-container>
     <ng-template #loadingTemplate>
-        <app-transaction-list [transactions]="[]" [displayedColumns]="['amount', 'date']"></app-transaction-list>
+        <app-transaction-list [transactions]="[]" [displayedColumns]="['amount', 'date', 'comment']"></app-transaction-list>
         <mat-card-footer>
             <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </mat-card-footer>

@@ -1,39 +1,47 @@
-<h1>Add Credit Card</h1>
-<form #creditCardForm="ngForm" (ngSubmit)="onClickAddCard(creditCardForm.value)">
-    <p>
-        <mat-form-field  hintLabel="Only numbers with 7-16 digits" appearance="outline" class="mat-focused">
+<mat-card class="mt-12">
+    <mat-card-title>Add Credit Card</mat-card-title>
+    <form #creditCardForm="ngForm" (ngSubmit)="onClickAddCard(creditCardForm)">
+        <mat-form-field  hintLabel="Only numbers with 7-16 digits" appearance="outline" class="w-full mt-4">
             <mat-label>Card Number</mat-label>
-            <input matInput type="number" min="1000000" max="9999999999999999" name="cardNumber" required ngModel>
+            <input matInput type="text" inputmode="numeric" name="cardNumber" mask="0000 0009 9999 9999" autocomplete="cc-number" required ngModel>
         </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field hintLabel="Only numbers with 3 digits" appearance="outline" class="mat-focused">
-            <mat-label>CSC Code</mat-label>
-            <input matInput type="number" min="100" max="999" name="cscCode" required ngModel>
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field appearance="outline" class="mat-focused">
-            <mat-label>Cardholder Name</mat-label>
-            <input matInput type="text" name="cardholderName" required ngModel>
-        </mat-form-field>
-    </p>
-    <mat-form-field appearance="outline" class="mat-focused">
-        <mat-label>Expiration Date Month</mat-label>
-        <input matInput type="number" name="expirationMonth" required ngModel>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="mat-focused">
-        <mat-label>Expiration Date Year</mat-label>
-        <input matInput type="number" name="expirationYear" required ngModel>
-    </mat-form-field>
-    <p>
-        <mat-form-field appearance="outline" class="mat-focused">
-            <mat-label>Card Issuer</mat-label>
-            <input matInput type="text" name="issuer" required ngModel>
-        </mat-form-field>
-    </p>
-    <p>
-        <button type="submit" [disabled]="!creditCardForm.valid" mat-raised-button color="primary">Add Card</button>
-    </p>
-    
-</form>
+        <div class="flex justify-between mt-4">
+            <mat-form-field appearance="outline" class="w-72">
+                <mat-label>Cardholder Name</mat-label>
+                <input matInput type="text" name="cardholderName" autocomplete="cc-name" required ngModel>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Card Issuer</mat-label>
+                <input matInput type="text" name="issuer" required ngModel>
+            </mat-form-field>
+        </div>
+        
+        <div class="flex justify-between gap-4">
+            <div>
+                <mat-form-field appearance="outline" class="w-20" >
+                    <mat-label>Month</mat-label>
+                    <input matInput type="number" name="expirationMonth" min="1" max="12" autocomplete="cc-exp-month" required ngModel>
+                </mat-form-field>
+                <span class="mx-2 text-2xl">/</span>
+                <mat-form-field appearance="outline" class="w-16">
+                    <mat-label>Year</mat-label>
+                    <input matInput type="number" name="expirationYear" min="0" autocomplete="cc-exp-year" required ngModel>
+                </mat-form-field>
+                
+            </div>
+            <mat-form-field hintLabel="Only numbers with 3 digits" appearance="outline">
+                <mat-label>CSC Code</mat-label>
+                <input matInput type="text" inputmode="numeric" mask="000" name="cscCode" autocomplete="cc-csc" required ngModel>
+            </mat-form-field>
+        </div>
+        
+        
+        <div>
+            
+        </div>
+        <div>
+            <button type="submit" [disabled]="!creditCardForm.valid" mat-raised-button color="primary">Add Card</button>
+        </div>
+        
+    </form>
+</mat-card>

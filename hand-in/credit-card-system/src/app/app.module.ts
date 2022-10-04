@@ -16,13 +16,13 @@ import { CreditCardModule } from './credit-card/credit-card.module';
 import { FormsModule } from '@angular/forms';
 import { TransactionModule } from './transaction/transaction.module';
 import { NgxMaskModule } from 'ngx-mask';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavigationBarComponent,
-    CreditCardAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +36,12 @@ import { NgxMaskModule } from 'ngx-mask';
     HttpClientModule,
     CreditCardModule,
     TransactionModule,
+    CreditCardAddComponent,
     NgxMaskModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

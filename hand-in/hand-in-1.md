@@ -35,7 +35,7 @@ The solution will provide the accounting department with an overview of use for 
 - `F4.2.2` ~~Field `csc_code` length must be `3` digits (integers)~~
 - `F4.2.4` ~~Field `csc_code` is required~~
 - `F4.3.1` ~~Field `cardholder_name` is required~~
-- `F4.4.1` Field `expiration_date_month` must be in range `1-12`
+- `F4.4.1` ~~Field `expiration_date_month` must be in range `1-12`~~
 - `F4.4.2` ~~Field `expiration_date_month` is required~~
 - `F4.5.1` ~~Field `expiration_date_year` is required~~
 
