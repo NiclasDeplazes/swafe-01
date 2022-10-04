@@ -1,6 +1,8 @@
-<h1>{{creditCard?.card_number}} Detail View</h1>
-<p>Cardholder Name: {{creditCard?.cardholder_name}}</p>
-<p>CSC Code: {{creditCard?.csc_code}}</p>
-<p>Expiration Date Month: {{creditCard?.expiration_date_month}}</p>
-<p>Expiration Date Year: {{creditCard?.expiration_date_year}}</p>
-<p>Issuer: {{creditCard?.issuer}}</p>
+<mat-card class="mt-3" *ngIf="creditCard$ | async as card">
+    <h1>{{ card.card_number }} Detail View</h1>
+    <p>Cardholder Name: {{ card.cardholder_name }}</p>
+    <p>CSC Code: {{ card.csc_code }}</p>
+    <p>Expiration Date Month: {{ card.expiration_date_month }}</p>
+    <p>Expiration Date Year: {{ card.expiration_date_year }}</p>
+    <p>Issuer: {{ card.issuer }}</p>
+</mat-card>

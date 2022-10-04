@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreditCardDetailComponent } from './credit-card-detail/credit-card-detail.component';
 import { MatListModule } from '@angular/material/list';
 import { NgxMaskModule } from 'ngx-mask';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgxMaskModule } from 'ngx-mask';
     HttpClientModule,
     MatListModule,
     NgxMaskModule,
+    MatCardModule,
   ],
   exports: [
     CreditCardListComponent,

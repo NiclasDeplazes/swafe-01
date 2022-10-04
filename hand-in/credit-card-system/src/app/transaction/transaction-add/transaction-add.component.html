@@ -1,7 +1,7 @@
-<mat-card class="mt-3">
+<mat-card class="mt-12">
     <mat-card-title>Add a transaction</mat-card-title>
     <form #transactionForm="ngForm" (ngSubmit)="onClickAddTransaction(transactionForm)">
-        <mat-form-field appearance="outline" class="w-full mt-1">
+        <mat-form-field appearance="outline" class="w-full mt-4">
             <mat-label>Credit Card</mat-label>
             <mat-select name="credit_card" ngModel>
                 <mat-option *ngFor="let card of credit_cards$ | async" [value]="card">
@@ -9,7 +9,7 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
-        <div class="flex gap-1">
+        <div class="flex gap-4">
             <mat-form-field appearance="outline">
                 <mat-label>Amount</mat-label>
                 <input matInput type="number" name="amount" required ngModel>
@@ -26,14 +26,14 @@
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <div class="mt-1">
+        <div class="mt-4">
             <mat-form-field appearance="outline" class="w-full">
                 <mat-label>Comment</mat-label>
                 <textarea matInput name="comment" ngModel></textarea>
             </mat-form-field>
         </div>
-        <div class="mt-1 flex justify-center">
-            <button type="submit"  mat-raised-button color="primary">Add Transaction</button>
+        <div class="flex justify-center">
+            <button type="submit" [disabled]="!transactionForm.valid" mat-raised-button color="primary">Add Transaction</button>
         </div>
     </form>
 </mat-card>
