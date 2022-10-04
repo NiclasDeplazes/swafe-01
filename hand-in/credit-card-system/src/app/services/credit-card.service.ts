@@ -42,4 +42,13 @@ export class CreditCardService {
             retry(5)
         )
     }
+
+    removeCard(card_number: number): Observable<any> {
+        return this.httpClient.delete(`${this.host}/${card_number}`).pipe(
+            catchError((e: HttpErrorResponse) => {
+                console.error(e.message);
+                return throwError(() => e);
+            })
+        )
+    }
 }

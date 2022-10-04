@@ -21,10 +21,10 @@ The solution will provide the accounting department with an overview of use for 
 - `F2.1.1`: ~~List item shall contain properties `card_number`, `cardholder_name`, `issuer`~~
 - `F2.1.2`: ~~Navigate to a credit card details screen when an entry is clicked/pressed~~
 
-`F3` Credit card details screen
+`F3` ~~Credit card details screen~~
 - `F3.1` ~~Screen shall contain elements displaying the following credit card properties: `card_number`, `cardholder_name`, `csc_code`, `expiration_date_month`, `expiration_date_year`, `issuer`~~
-- `F3.2` Screen shall contain the option to remove the credit card
-- `F3.3` Screen shall contain a list of transactions for the credit card
+- `F3.2` ~~Screen shall contain the option to remove the credit card~~
+- `F3.3` ~~Screen shall contain a list of transactions for the credit card~~
 
 `F4` Add credit card screen
 - `F4.1` ~~Form that contains fields for `card_number`, `cardholder_name`, `csc_code`, `expiration_date_month`, `expiration_date_year`, `issuer`~~

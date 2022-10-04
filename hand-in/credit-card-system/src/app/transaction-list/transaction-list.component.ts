@@ -22,7 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrls: ['./transaction-list.component.scss']
 })
 export class TransactionListComponent implements OnInit {
-  displayedColumns: string[] = ['card_number', 'amount', 'date', 'comment', 'actions'];
+  @Input() displayedColumns: string[] = ['card_number', 'amount', 'date', 'comment', 'actions'];
   @Input() transactions!: Transaction[];
   @Output() deleteTransactionEvent = new EventEmitter<string>();
   constructor() { }

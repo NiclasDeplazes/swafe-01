@@ -7,11 +7,17 @@ import { CreditCardDetailComponent } from './credit-card-detail/credit-card-deta
 import { MatListModule } from '@angular/material/list';
 import { NgxMaskModule } from 'ngx-mask';
 import { MatCardModule } from '@angular/material/card';
+import { ExpirationYearPipe } from '../pipes/expiration-year.pipe';
+import { TransactionListComponent } from '../transaction-list/transaction-list.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     CreditCardListComponent,
-    CreditCardDetailComponent
+    CreditCardDetailComponent,
+    ExpirationYearPipe,
   ],
   imports: [
     CommonModule,
@@ -20,6 +26,10 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     NgxMaskModule,
     MatCardModule,
+    MatProgressBarModule,
+    MatIconModule,
+    MatButtonModule,
+    TransactionListComponent,
   ],
   exports: [
     CreditCardListComponent,
