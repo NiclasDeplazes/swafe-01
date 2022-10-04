@@ -1,12 +1,21 @@
-.transaction {
-    &-card {
-        margin-top: 3rem;
-    }
+.mt-1 {
+    margin-top: 1rem;
+}
 
-    &-add-button {
-        position: fixed;
-        inset: auto 1rem 1rem auto;
-    }
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.bottom-1 {
+    bottom: 1rem;
+}
+
+.right-1 {
+    right: 1rem;
 }
 
 :host {

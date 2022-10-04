@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreditCardModule } from './credit-card/credit-card.module';
 import { FormsModule } from '@angular/forms';
 import { TransactionModule } from './transaction/transaction.module';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TransactionModule } from './transaction/transaction.module';
     FormsModule,
     HttpClientModule,
     CreditCardModule,
-    TransactionModule
+    TransactionModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

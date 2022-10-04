@@ -12,6 +12,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { TransactionFilterPipe } from '../pipes/transaction-filter.pipe';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NgxMaskModule } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -21,15 +26,20 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   ],
   imports: [
     CommonModule,
-    TransactionListComponent,
-    FormsModule,
     TransactionRoutingModule,
+    FormsModule,
+    TransactionListComponent,
     MatIconModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
     MatProgressBarModule,
-  ]
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    NgxMaskModule,
+  ],
 })
 export class TransactionModule { }

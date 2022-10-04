@@ -21,5 +21,15 @@ export class TransactionService {
             retry(5)
         )
     }
+
+    addTransaction(transaction: Transaction): Observable<any> {
+        return this.httpClient.post<Transaction>(this.host, transaction).pipe(
+            catchError((e: HttpErrorResponse) => {
+                console.error(e.message)
+                return throwError(() => e);
+            }),
+            retry(5)
+        )
+    }
 }
 

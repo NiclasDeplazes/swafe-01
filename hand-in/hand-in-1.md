@@ -39,7 +39,7 @@ The solution will provide the accounting department with an overview of use for 
 - `F4.4.2` ~~Field `expiration_date_month` is required~~
 - `F4.5.1` ~~Field `expiration_date_year` is required~~
 
-`F5` Transactions screen
+`F5` ~~Transactions screen~~
 - `F5.1` ~~Screen shall show a list of all transactions registered in the system~~
 - `F5.1.2` ~~Screen shall present the option to add a transaction to the transaction list~~
 - `F5.1.3` ~~Screen shall present the option to filter transactions~~
@@ -47,11 +47,11 @@ The solution will provide the accounting department with an overview of use for 
 
 `F6` Transactions list
 - `F6.1.1` ~~Each transaction shall display properties `credit_card`, `amount`, `currency`, `comment`, `date`~~
-- `F6.1.2` Field `credit_card` shall be selected from a list of credit cards
-- `F6.1.3` Field `amount` must be a `number`
-- `F6.1.4` Field `amount` is required
-- `F6.1.5` Field `currency` is required
-- `F6.1.6` Field `date` is required
+- `F6.1.2` ~~Field `credit_card` shall be selected from a list of credit cards~~
+- `F6.1.3` ~~Field `amount` must be a `number`~~
+- `F6.1.4` ~~Field `amount` is required~~
+- `F6.1.5` ~~Field `currency` is required~~
+- `F6.1.6` ~~Field `date` is required~~
 - `F6.1.7` Each transaction shall present the option to remove itself
 
 ## Design requirements 

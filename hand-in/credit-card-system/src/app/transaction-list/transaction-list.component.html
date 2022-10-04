@@ -2,7 +2,7 @@
   <!-- Card number Column -->
   <ng-container matColumnDef="card_number">
     <th mat-header-cell *matHeaderCellDef>Card number</th>
-    <td mat-cell *matCellDef="let row">{{ row.credit_card.card_number }}</td>
+    <td mat-cell *matCellDef="let row">{{ row.credit_card.card_number | mask: '0000 0000 0000 0000' }}</td>
   </ng-container>
 
   <!-- Amount Column -->

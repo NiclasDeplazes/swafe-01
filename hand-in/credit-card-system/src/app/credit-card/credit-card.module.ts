@@ -5,7 +5,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CreditCardDetailComponent } from './credit-card-detail/credit-card-detail.component';
 import { MatListModule } from '@angular/material/list';
-
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { MatListModule } from '@angular/material/list';
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    NgxMaskModule,
   ],
   exports: [
     CreditCardListComponent,

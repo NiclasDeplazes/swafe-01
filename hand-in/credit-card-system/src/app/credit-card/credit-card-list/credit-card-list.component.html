@@ -1,6 +1,6 @@
 <mat-list>
   <mat-list-item *ngFor="let creditCard of creditCards$ | async" [routerLink]="['/credit-card', creditCard.card_number]">
-    <div mat-line>Card Number: {{creditCard.card_number}}</div>
+    <div mat-line>Card Number: {{creditCard.card_number | mask: '0000 0000 0000 0000' }}</div>
     <div mat-line>Card Holder: {{creditCard.cardholder_name}}</div>
     <div mat-line>Card Issuer: {{creditCard.issuer}}</div>
   </mat-list-item>
